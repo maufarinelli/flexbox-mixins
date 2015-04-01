@@ -1,0 +1,48 @@
+/**
+* Mixin for a flexbox wrapper
+*
+* display: flex | inline-flex ( default for our mixin: flex )
+* flex-wrap: nowrap | wrap | wrap-reverse ( default: nowrap )
+* flex-direction: row | row-reverse | column | column-reverse ( default: row )
+* justify-content: flex-start | flex-end | center | space-between | space-around ( default: flex-start )
+* align-items: flex-start | flex-end | center | baseline | stretch ( default: stretch )
+* align-content: flex-start | flex-end | center | space-between | space-around | stretch ( default: stretch )
+**/
+/**
+* Mixin for a flexbox child
+*
+* order: <integer>
+* flex-grow: <integer>; ( default 0 )
+* flex-shrink: <integer>; ( default 1 )
+* flex-basis: <length> | auto; ( default auto )
+* align-self: auto | flex-start | flex-end | center | baseline | stretch;
+**/
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.child {
+  width: 200px;
+  background-color: green;
+  margin-left: 20px;
+}
+.child-1 {
+  flex-grow: 2;
+}
+.child-2 {
+  flex-shrink: 2;
+}
+.child-3 {
+  flex-basis: 1;
+}
+.child-6 {
+  background-color: red;
+  order: 1;
+}
+.child-7 {
+  align-self: stretch;
+}

@@ -1,0 +1,36 @@
+@import '../styles/_mixins';
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    .flex-wrapper(@flex-wrap: nowrap, @flex-direction: row, @align-items: flex-end);
+}
+
+.child {
+    width: 200px;
+    background-color: green;
+    margin-left: 20px;
+}
+
+.child-1 {
+    .flex-child(@flex-grow: 2);
+}
+.child-2 {
+    .flex-child(@flex-shrink: 2);
+}
+.child-3 {
+    .flex-child(@flex-basis: 1);
+}
+.child-4 {
+
+}
+.child-5 {
+
+}
+.child-6 {
+    background-color: red;
+    .flex-child(@order: 1);
+}
+.child-7 {
+    .flex-child(@align-self: stretch);
+}
